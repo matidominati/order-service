@@ -1,5 +1,8 @@
 package com.matidominati.orderservice.orderservice.model;
 
+import lombok.Data;
+
+@Data
 public class Address {
 
     private String city;

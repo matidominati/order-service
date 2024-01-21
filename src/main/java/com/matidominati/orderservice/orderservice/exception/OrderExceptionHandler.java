@@ -16,4 +16,13 @@ public class OrderExceptionHandler {
                 .timestamp(ZonedDateTime.now())
                 .build());
     }
+
+    @ExceptionHandler(OrderModificationException.class)
+    public ResponseEntity<Object> handleOrderModificationException(OrderModificationException ex) {
+        return ResponseEntity.status(ex.getHttpStatus()).body(ErrorResponse.builder()
+                .message(ex.getMessage())
+                .httpStatus(ex.getHttpStatus())
+                .timestamp(ZonedDateTime.now())
+                .build());
+    }
 }

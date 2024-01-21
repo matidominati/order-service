@@ -8,9 +8,10 @@ import java.util.List;
 
 @Data
 public class CartDto {
+    private Long id;
     private LocalDateTime createdAt;
     private LocalDateTime modifiedAt;
     private BigDecimal totalPrice;
-    private List<CartItemDto> cartItemEntities;
+    private List<CartItemDto> cartItems;
     private String discountCode;
 }

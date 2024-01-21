@@ -1,6 +1,8 @@
 package com.matidominati.orderservice.orderservice.model.entity;
 
 import com.matidominati.orderservice.orderservice.model.Customer;
+import com.matidominati.orderservice.orderservice.model.dto.OrderItemDto;
+import com.matidominati.orderservice.orderservice.model.enums.OrderStatus;
 import jakarta.persistence.Id;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -19,11 +21,13 @@ import java.util.Objects;
 public class OrderEntity {
 
     @Id
-    private Long id;
+    private String id;
+    private Long cartId;
     private BigDecimal totalPrice;
-    private List<OrderItemEntity> orderItems;
+    private List<OrderItemDto> orderItems;
     private LocalDateTime createdAt;
     private Customer customer;
+    private OrderStatus orderStatus;
 
     @Override
     public boolean equals(Object o) {
