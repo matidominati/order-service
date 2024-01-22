@@ -6,7 +6,6 @@ import com.matidominati.orderservice.orderservice.model.entity.OrderEntity;
 import com.matidominati.orderservice.orderservice.model.enums.OrderStatus;
 import com.matidominati.orderservice.orderservice.service.OrderService;
 import lombok.RequiredArgsConstructor;
-import org.bson.types.ObjectId;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

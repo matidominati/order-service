@@ -1,7 +1,6 @@
 package com.matidominati.orderservice.orderservice.model;
 
-import lombok.*;
-
+import lombok.Data;
 
 @Data
 public class Customer {

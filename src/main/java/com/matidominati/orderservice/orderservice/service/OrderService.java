@@ -58,8 +58,6 @@ public class OrderService {
         log.info("Mapping cart to order DTO: {}", orderEntity);
         orderEntity.setCreatedAt(LocalDateTime.now());
         orderEntity.setCustomer(customer);
-//        orderEntity.setTotalPrice(orderEntity.getTotalPrice());
-//        orderEntity.setOrderItems(orderEntity.getOrderItems());
         log.info("Saving new order: {}", orderEntity);
         orderEntity.setOrderStatus(OrderStatus.NEW);
         orderRepository.save(orderEntity);
